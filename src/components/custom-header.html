@@ -1,0 +1,28 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="custom-header">
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 10px;
+      }
+      ::slotted(a) {
+        text-decoration: none;
+        color: #f00;
+      }
+    </style>
+
+    <header>
+      <nav><slot></slot></nav>
+    </header>
+  </template>
+
+  <script>
+    class CustomHeader extends Polymer.Element {
+      static get is() { return 'custom-header'; }
+    }
+
+    window.customElements.define(CustomHeader.is, CustomHeader);
+  </script>
+</dom-module>
