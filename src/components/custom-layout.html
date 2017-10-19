@@ -1,0 +1,27 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="custom-layout">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      ::slotted(a) {
+        text-decoration: none;
+        color: #f00;
+      }
+    </style>
+
+    <header>
+      <nav><slot></slot></nav>
+    </header>
+  </template>
+
+  <script>
+    class CustomLayout extends Polymer.Element {
+      static get is() { return 'custom-layout'; }
+    }
+
+    window.customElements.define(CustomLayout.is, CustomLayout);
+  </script>
+</dom-module>

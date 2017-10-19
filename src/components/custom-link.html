@@ -1,0 +1,53 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="custom-link">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      a {
+        display: inline-block;
+        min-width: 220px;
+        padding: 0 24px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 50px;
+        text-align: center;
+        white-space: nowrap;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: all .2s ease-in-out;
+        color: var(--text-color, #000);
+        background-color: var(--button-color, green);
+      }
+      a:hover {
+        opacity: 0.7;
+      }
+    </style>
+
+    <a href$="[[url]]" on-click="handleClick"><slot></slot></a>
+  </template>
+</dom-module>
+
+<script>
+class CustomLink extends Polymer.Element {
+  static get is() {
+    return 'custom-link';
+  }
+  static get properties() {
+    return {
+      url: {
+        type: String
+      }
+    }
+  }
+  constructor() {
+    super();
+  }
+  handleClick() {
+    this.clicked = !this.clicked;
+  }
+}
+customElements.define(CustomLink.is, CustomLink);
+</script>
