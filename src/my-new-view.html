@@ -9,31 +9,37 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/l2t-paper-slider/l2t-paper-slider.html">
 <link rel="import" href="shared-styles.html">
+<link rel="import" href="/src/components/custom-button.html">
 
-<dom-module id="my-view2">
+<dom-module id="my-view1">
   <template>
     <style include="shared-styles">
       :host {
         display: block;
-
         padding: 10px;
+        --text-color: #fff;
+        --button-color: #0CB9AC;
       }
     </style>
 
-    <div class="card">
-      <div class="circle">2</div>
-      <h1>View Two</h1>
-      <p>Ea duis bonorum nec, falli paulo aliquid ei eum.</p>
-      <p>Id nam odio natum malorum, tibique copiosae expetenda mel ea.Detracto suavitate repudiandae no eum. Id adhuc minim soluta nam.Id nam odio natum malorum, tibique copiosae expetenda mel ea.</p>
+    <div>
+      <l2t-paper-slider auto-progress slide-duration="2" total-slides="3">
+        <paper-slide><img src="/images/img01.jpg" alt=""></paper-slide>
+        <paper-slide><img src="/images/img02.jpg" alt=""></paper-slide>
+        <paper-slide><img src="/images/img03.jpg" alt=""></paper-slide>
+      </l2t-paper-slider>
+
+      <custom-button text-color="#fff" button-color="#0CB9AC" value="BUTTON"></custom-button>
     </div>
   </template>
 
   <script>
-    class MyView2 extends Polymer.Element {
-      static get is() { return 'my-view2'; }
+    class MyView1 extends Polymer.Element {
+      static get is() { return 'my-view1'; }
     }
 
-    window.customElements.define(MyView2.is, MyView2);
+    window.customElements.define(MyView1.is, MyView1);
   </script>
 </dom-module>

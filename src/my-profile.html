@@ -1,0 +1,62 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="/src/components/custom-layout.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-profile">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        --image-size: 220px;
+        --margin-size:14px;
+      }
+    </style>
+
+    <custom-layout src="/images/profile1.jpg">
+      <h2>オオキタカノリ</h2>
+      <p>都内で働くフロントエンドエンジニア。猫、温泉、ゲーム、ロボットアニメ、自転車、フォントが好き。HTML/CSS/JSとたまにWordPress。最近はReactやVueをよく書いてる。</p>
+      <p>
+        ウェブサイト : <a href="https://takanorip.com">https://takanorip.com</a><br>
+        Twitter : <a href="https://twitter.com/takanoripe">@takanoripe</a><br>
+        Qiita : <a href="https://qiita.com/takanorip">@takanorip</a><br>
+        GitHub : <a href="https://github.com/takanorip">@takanorip</a>
+      </p>
+    </custom-layout>
+
+    <custom-layout src="/images/profile2.jpg">
+      <h2>ミズノレンヤ</h2>
+      <p>名古屋で働いているフロントとかバックエンドとかやってるひと。睡眠欲の塊。「めろたん」と呼ばれている。。</p>
+      <p>
+        Twitter : <a href="https://twitter.com/renyamizuno_">@renyamizuno_</a><br>
+        GitHub : <a href="https://github.com/renyamizuno">@renyamizuno</a>
+      </p>
+    </custom-layout>
+
+    <custom-layout src="/images/profile3.jpg">
+      <h2>アサオカアツコ</h2>
+      <p>猫派の甘党、胃が弱い系WEB屋。フリーランスのWebデザイナー／フロントエンドエンジニアとして日々をぼんやり過ごしている。基本出不精だが、ライブ参戦の為に台湾まで出向く信仰心も持つ。</p>
+      <p>
+        ウェブサイト : <a href="https://atsuco.me">https://atsuco.me</a><br>
+        Twitter : <a href="https://twitter.com/atsuco">@atsuco</a><br>
+      </p>
+    </custom-layout>
+  </template>
+
+  <script>
+    class MyProfile extends Polymer.Element {
+      static get is() { return 'my-profile'; }
+    }
+
+    window.customElements.define(MyProfile.is, MyProfile);
+  </script>
+</dom-module>
