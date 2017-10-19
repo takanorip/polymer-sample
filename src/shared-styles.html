@@ -14,8 +14,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <dom-module id="shared-styles">
   <template>
     <style>
-      .card {
+      .card-wrap {
         margin: 24px;
+      }
+      .card {
+        max-width: 800px;
+        margin: auto;
         padding: 16px;
         color: #666;
         border-radius: 5px;
@@ -54,8 +58,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         background-position: center;
       }
 
+      a {
+        text-decoration: none;
+        color: var(--app-secondary-color);
+      }
+      a:hover {
+        color: var(--app-accent-color);
+      }
+
       @media (max-width: 600px) {
-        .card {
+        .card-wrap {
           margin: 16px;
         }
       }

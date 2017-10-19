@@ -9,6 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="/src/components/custom-layout.html">
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-profile">
@@ -16,15 +17,39 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style include="shared-styles">
       :host {
         display: block;
+        --image-size: 220px;
+        --margin-size:14px;
       }
     </style>
 
-    <div class="card">
-      <div class="circle">3</div>
-      <h1>View Three</h1>
-      <p>Modus commodo minimum eum te, vero utinam assueverit per eu.</p>
-      <p>Ea duis bonorum nec, falli paulo aliquid ei eum.Has at minim mucius aliquam, est id tempor laoreet.Pro saepe pertinax ei, ad pri animal labores suscipiantur.</p>
-    </div>
+    <custom-layout src="/images/profile1.jpg">
+      <h2>オオキタカノリ</h2>
+      <p>都内で働くフロントエンドエンジニア。猫、温泉、ゲーム、ロボットアニメ、自転車、フォントが好き。HTML/CSS/JSとたまにWordPress。最近はReactやVueをよく書いてる。</p>
+      <p>
+        ウェブサイト : <a href="https://takanorip.com">https://takanorip.com</a><br>
+        Twitter : <a href="https://twitter.com/takanoripe">@takanoripe</a><br>
+        Qiita : <a href="https://qiita.com/takanorip">@takanorip</a><br>
+        GitHub : <a href="https://github.com/takanorip">@takanorip</a>
+      </p>
+    </custom-layout>
+
+    <custom-layout src="/images/profile2.jpg">
+      <h2>ミズノレンヤ</h2>
+      <p>名古屋で働いているフロントとかバックエンドとかやってるひと。睡眠欲の塊。「めろたん」と呼ばれている。。</p>
+      <p>
+        Twitter : <a href="https://twitter.com/renyamizuno_">@renyamizuno_</a><br>
+        GitHub : <a href="https://github.com/renyamizuno">@renyamizuno</a>
+      </p>
+    </custom-layout>
+
+    <custom-layout src="/images/profile3.jpg">
+      <h2>アサオカアツコ</h2>
+      <p>猫派の甘党、胃が弱い系WEB屋。フリーランスのWebデザイナー／フロントエンドエンジニアとして日々をぼんやり過ごしている。基本出不精だが、ライブ参戦の為に台湾まで出向く信仰心も持つ。</p>
+      <p>
+        ウェブサイト : <a href="https://atsuco.me">https://atsuco.me</a><br>
+        Twitter : <a href="https://twitter.com/atsuco">@atsuco</a><br>
+      </p>
+    </custom-layout>
   </template>
 
   <script>

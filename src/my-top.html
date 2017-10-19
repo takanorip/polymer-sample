@@ -20,7 +20,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: block;
         --paper-slide-height: 56.25%;
         --text-color: #fff;
-        --button-color: #FDBE34;
+        --button-color: var(--app-accent-color);
       }
 
       paper-slide {
@@ -41,11 +41,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </l2t-paper-slider>
     </div>
 
-    <div class="card">
-      <h1>サンプルサイト</h1>
-      <p>「イヌでもわかるWeb Components」お買上げありがとうございます！</p>
-      <p>このサイトは「イヌでもわかるWeb Component」で紹介したPolymerを使用して作られています。スターターキットを少しアレンジしました。コードが見たい方はGitLabにソースがあります。</p>
-      <custom-link url="https://gitlab.com/inutetraplus/polymer-sample"><span>ソースコード</span></custom-link>
+    <div class="card-wrap">
+      <div class="card">
+        <h1>サンプルサイト</h1>
+        <p>「イヌでもわかるWeb Components」お買上げありがとうございます！</p>
+        <p>このサイトは「イヌでもわかるWeb Component」で紹介したPolymerを使用して作られています。スターターキットを少しアレンジしました。</p>
+        <p>コードが見たい方はGitLabにソースがあります。</p>
+        <custom-link url="https://gitlab.com/inutetraplus/polymer-sample"><span>ソースコード</span></custom-link>
+      </div>
     </div>
   </template>
 
